@@ -22,7 +22,7 @@ export class AuthController {
   @UseGuards(AuthGuard())
   @Get('profile')
   @ApiOperation({
-    summary: 'Pegar o usuário logado no momento',
+    summary: 'Get the logged user',
   })
   @ApiBearerAuth()
   profile(@AuthUser() user: User) {
